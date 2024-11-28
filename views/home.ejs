@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="public/scripts/form.js" defer></script>
+    <title>Guestbook Form</title>
+    <link rel="stylesheet" href="stylesheet/styles.css">
+    <link rel="icon" type="image/png" href="images/profile.png">
+</head>
+<body>
+    <div class="container">
+        <h2>Contact Form</h2>
+        <form id="contact-form" method="POST" action="/success">
+            <div class="form-group">
+                <div>
+                <label for="firstName">First Name</label>
+                <span id="err-fname" class="err">
+                    (Please enter a first name)
+                </span>
+                <input type="text" id="firstName" name="firstName">
+                </div>
+
+                <div>
+                <label for="lastName">Last Name</label>
+                <span id="err-lname" class="err">
+                    (Please enter a last name)
+                </span>
+                <input type="text" id="lastName" name="lastName">
+                </div>
+
+                <div>
+                <label for="jobTitle">Job Title</label>
+                <input type="text" id="jobTitle" name="jobTitle">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div>
+                <label for="company">Company</label>
+                <input type="text" id="company" name="company">
+                </div>
+
+                <div>
+                <label for="linkedin">LinkedIn URL</label>
+                <span id="err-linkedin" class="err">
+                    (Please enter a valid URL)
+                </span>
+                <input type="text" id="linkedin" name="linkedin">
+                </div>
+
+                <div>
+                <label for="email">Email Address</label>
+                <span id="err-noEmail" class="err">
+                    (Please enter a valid email)
+                </span>
+                <span id="err-invalidEmail" class="err">
+                    (Email must contain an @ and a . symbol.)
+                </span>
+                <input type="text" id="email" name="email">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div>
+                <label for="howMeet">How did we meet?</label>
+                <span id="err-howMeet" class="err">
+                    (Please select a valid option)
+                </span>
+                <select id="howMeet" name="howMeet">
+                    <option value="">Please select--</option>
+                    <option value="meetup">Meetup</option>
+                    <option value="jobFair">Job Fair</option>
+                    <option value="conference">Conference</option>
+                    <option value="online">Online</option>
+                    <option value="other">Other</option>
+
+                </select>
+                </div>
+        
+                <div id="other-option">
+                <label for="other">Other (please specify)</label>
+                <span id="err-other" class="err">
+                    (Please specify)
+                </span>
+                <input type="text" id="other" name="other">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="mailingOption">
+                <input type="checkbox" id="mailingList" name="mailingList">
+                <label for="mailingList">Please add me to your mailing list</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div id="checks">
+                <label>Choose an email format:</label>
+                <input type="radio" id="html" name="emailFormat" value="HTML">
+                <label for="html">HTML</label>
+                <input type="radio" id="text" name="emailFormat" value="Text">
+                <label for="text">Text</label>
+            </div>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

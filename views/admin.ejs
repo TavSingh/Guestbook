@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <% if (data.length !== 0) { %>
+        <ul>
+        <% for(let i = 0; i < data.length; i++ ) { %>
+            <li><%= data[i].firstName %> <%= data[i].lastName %> <%= data[i].jobTitle %> <%= data[i].company %> <%= data[i].linkedin %> <%= data[i].email %> <%= data[i].howMeet %> <%= data[i].other %> <%= data[i].message %></li>
+        <% } %>
+        </ul>
+    <% } else { %>
+        <p>No data!</p>
+    <% } %>
+</body>
+</html>

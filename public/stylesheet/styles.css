@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 60%;
+    margin: 50px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Apply grid layout to the form */
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: px;
+}
+
+input[type="text"],
+input[type="url"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 4px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Full-width for textarea and submit button */
+textarea {
+    height: 100px;
+    width: 100%;
+
+}
+
+button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 5rem;
+
+}
+
+button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+/* Style for checkboxes and radio buttons */
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: 10px;
+    
+}
+
+/* The mailing list and email format options are in one column */
+.form-group {
+    grid-column: span 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+
+.form-group input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.form-group label {
+    padding-bottom: 1rem;
+}
+
+#checks {
+    padding-bottom: 1rem;
+    display: none;
+}
+
+.err {
+    color: darkred;
+    display: none;
+}
+
+#other-option {
+    display: none;
+}
